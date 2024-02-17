@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+html{
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+    width: 100%;
+    height: 100vh;
+}
+h2{
+    font-size: 3rem;
+}
+p{
+    font-size: 12px;
+}
+a{
+    text-decoration: none;
+}
+/* TERMS HEADER */
+.terms-header{
+    width: 100%;
+    height: 300px;
+    background-color: #7ee8fa;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.privacy-header{
+    background-color: blueviolet;
+}
+/* TERMS BOX */
+.terms-box{
+    margin-top: 3rem;
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction:column;
+    gap: 1rem;
+}
+.terms-box li{
+    font-size: 12px;
+}
+
+/* TERMS-BOTTOM */
+.terms-bottom{
+    padding: 2rem 2rem;
+    background-color: #7ee8fa;
+    text-align: center;
+    color: black;
+}
+.privacy-bottom{
+    background-color: blueviolet;
+}
+.terms-bottom h4 span{
+    color: white;
+}
+
+@media screen and (max-width:500px) {
+    h2{
+        font-size: 2.5rem;
+    }
+    .terms-bottom{
+        padding: 1rem;
+    }
+    h4{
+        font-size: 0.7rem;
+    }
+}
+@media screen and (max-width:380px) {
+    .terms-header{
+        height: 200px;
+    }
+    h2{
+        font-size: 1.7rem;
+    }
+    .terms-box li{
+        font-size: 10px;
+    }
+}
