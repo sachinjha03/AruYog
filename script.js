@@ -16,3 +16,11 @@ const displayFormScreen = () => {
 const hideFormScreen = () => {
     formScreen.style.display = "none"
 }
+
+function showDetail(e){
+    // console.log(e.target.parentNode.querySelector(".course-detail"));
+    e.target.parentNode.querySelector(".course-detail").style.top = "0%"
+}
+function hideDetail(e){
+    e.target.parentNode.style.top = "100%"
+}
