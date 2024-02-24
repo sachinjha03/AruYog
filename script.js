@@ -15,10 +15,11 @@ const displayFormScreen = () => {
 }
 const hideFormScreen = () => {
     formScreen.style.display = "none"
+    document.getElementById("psychologicalCourseDetail").style.top = "100%";
+    document.getElementById("corporateCourseDetail").style.top = "100%";
 }
 
 function showDetail(e){
-    // console.log(e.target.parentNode.querySelector(".course-detail"));
     e.target.parentNode.querySelector(".course-detail").style.top = "0%"
 }
 function hideDetail(e){

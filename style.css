@@ -49,6 +49,7 @@ p{
     align-items: center;
     background-color: #25d366;
     color: white;
+    z-index: 1001;
 }
 .sticky-whatsapp    .fa-whatsapp{
     font-size: 26px;
@@ -269,9 +270,13 @@ p{
     display: flex;
     gap: 4rem;
     width: 100%;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    /* justify-content: space-evenly; */
+    /* flex-wrap: wrap; */
+    overflow-x: auto;
     padding: 1rem 1rem;
+}
+.mentor-section-bottom::-webkit-scrollbar{
+    display: none;
 }
 .mentor-card{
     display: flex;
@@ -708,5 +713,10 @@ textarea{
         min-height: none;
         height: auto;
         justify-content: space-evenly;
+    }
+    .why-us-section-bottom-card-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
