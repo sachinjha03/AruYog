@@ -25,3 +25,38 @@ function showDetail(e){
 function hideDetail(e){
     e.target.parentNode.style.top = "100%"
 }
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const formData = new FormData(this);
+    const jsonData = {};
+    formData.forEach((value, key) => {
+        jsonData[key] = value;
+    });
+
+    jsonData['apiKey'] = 'jtvybVyUIs17bi9dHY3dS8V2ehyaSqJ68WAQCp0V';
+
+    const requestOptions = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(jsonData)
+    };
+
+    fetch('https://z29aung0oc.execute-api.ap-south-1.amazonaws.com/stage_1/send_email', requestOptions)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            alert('Email sent successfully');
+        })
+        .catch(error => {
+            console.error('There was a problem sending the email:', error);
+            alert('There was a problem sending the email');
+        });
+});

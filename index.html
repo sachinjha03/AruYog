@@ -495,9 +495,9 @@
 
     <div class="form-screen" id="formScreen">
       <form
-        action="https://formsubmit.co/contact@aruyog.com"
         method="POST"
         class="contact-form"
+        id="contactForm"
       >
         <i
           class="fa-regular fa-circle-xmark close-icon"
@@ -522,8 +522,8 @@
             <input type="number" name="Age" class="input-field" />
           </div>
           <div class="input-box">
-            <p>Gender (optional)</p>
-            <select name="gender" class="input-field">
+            <p>Gender</p>
+            <select name="gender" class="input-field" required>
               <option value="male">Male</option>
               <option value="female">Female</option>
             </select>
