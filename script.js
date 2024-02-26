@@ -54,7 +54,8 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         })
         .then(data => {
             alert('Email sent successfully');
-            console.log("Email Sent Successfully")
+            console.log("Email Sent Successfully");
+            hideFormScreen()
         })
         .catch(error => {
             console.error('There was a problem sending the email:', error);
